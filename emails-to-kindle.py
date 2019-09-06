@@ -56,6 +56,8 @@ with IMAPClient(config['imap_address']) as imap_server_connection:
                     title_tag = payload_soup.new_tag('title')
                     title_tag.string = email_message.get('From') + ': ' + email_message.get('Subject')
                     
+                    print(title_tag.string)
+                    
                     head_tag.insert(0, title_tag)
                     
                     filename = today + " ".join([c for c in title_tag.string if c.isalpha() or c.isdigit() or c==' ']).rstrip()
@@ -80,3 +82,5 @@ with IMAPClient(config['imap_address']) as imap_server_connection:
 
             # Send the email
             sender.send()
+    else:
+        print("No new emails.")
