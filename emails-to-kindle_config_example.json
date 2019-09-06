@@ -1,0 +1,11 @@
+{
+
+	"email_id": "example@example.com",
+	"email_pw": "example",
+    "imap_address": "imap.gmail.com",
+	"smtp_address": "smtp.gmail.com",
+	"smtp_port_number": 465,
+	"smtp_ssl_needed": true,
+	"email_recipient_addresses": "example@kindle.com",
+    "email_subject": "emails"
+}
